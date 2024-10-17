@@ -1,5 +1,24 @@
 <html>
-    <body>
+    <body style="background-color: gray;">
     <h1>Hola Alumnos esta es nuestra primera plantilla con Django</h1>
     </body>
+    <p>El nombre del profesor es: {{nombre_persona.upper}} {{apellido_persona.upper}} y el dia es {{Hora.day}}/{{Hora.month}}/{{Hora.year}}</p>
+    <p><strong>Temas del Curso</strong></p>
+    <!-- <p>Los temas que vamos a ver son: {{temas.1}}, {{temas.2}}, {{temas.2}}, {{temas.3}}</p> -->
+     <p>
+        <ul>
+            {% if temas %}
+                {% for elTema in temas %}
+
+                    <li>{{elTema}}</li>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>No hay elementos que mostrar</p>
+                
+            {% endif %}
+        </ul>
+     </p>
 </html>
