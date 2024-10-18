@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Proyecto1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/Pampa/Desktop/Tecnicatura En Programacion/2024/16 - SegundoSemestre/Curso de Pildoras informaticas Django/curso_django_gallego_pildoras/Proyecto1/Proyecto1/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

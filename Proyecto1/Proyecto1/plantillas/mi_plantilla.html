@@ -1,8 +1,18 @@
 <html>
     <body style="background-color: gray;">
     <h1>Hola Alumnos esta es nuestra primera plantilla con Django</h1>
-    </body>
-    <p>El nombre del profesor es: {{nombre_persona.upper}} {{apellido_persona.upper}} y el dia es {{Hora.day}}/{{Hora.month}}/{{Hora.year}}</p>
+
+    {% if nombre_persona == 'Profesor Juan'%}
+
+    <p>El curso lo imparte el profesor TITULAR</p>
+
+    {% else %}
+
+    <p>El curso lo imparte el profesor SUPLENTE</p>
+
+    {% endif %}
+
+    <p>El nombre del profesor es: {{nombre_persona|lower}} {{apellido_persona.upper}} y el dia es {{Hora.day}}/{{Hora.month}}/{{Hora.year}}</p>
     <p><strong>Temas del Curso</strong></p>
     <!-- <p>Los temas que vamos a ver son: {{temas.1}}, {{temas.2}}, {{temas.2}}, {{temas.3}}</p> -->
      <p>
@@ -10,7 +20,7 @@
             {% if temas %}
                 {% for elTema in temas %}
 
-                    <li>{{elTema}}</li>
+                    <li>{{elTema|first|lower}}</li>
 
                 {% endfor %}
 
@@ -21,4 +31,5 @@
             {% endif %}
         </ul>
      </p>
+    </body>
 </html>
