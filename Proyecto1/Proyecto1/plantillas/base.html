@@ -1,0 +1,29 @@
+<html>
+    <head>
+            <!-- Le decimos a django que el titulo puede cambiar -->
+        <title>
+            
+            {% block title %} {% endblock %}
+
+        </title>
+
+    </head>
+
+    <body>
+
+        <!-- Contenido comun que vamos a tener -->
+        <h1 style="background-color: darkolivegreen; color: white; text-align: center;">Pildoras del Gallego</h1>
+        {% include "superior/barra.html"%}
+        <h3 style="text-align: right;">Curso de Django y diseño web</h3>
+
+
+        <!-- Zona que va a cambiar -->
+        {% block content %} {% endblock %}
+
+
+        <p style="background-color: darkolivegreen; color: white; text-align: right;">Curso gratuitos gracias perro</p>
+
+
+    </body>
+
+</html>

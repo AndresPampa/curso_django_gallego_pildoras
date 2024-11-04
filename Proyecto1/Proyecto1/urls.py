@@ -26,5 +26,7 @@ urlpatterns = [
     path('saludos/', saludos),
     path('nosveremos/', despedida),
     path('fecha/', dame_fecha),
-    path('edades/<int:edad>/<int:anio>', calculaEdad)
+    path('edades/<int:edad>/<int:anio>', calculaEdad),
+    path('cursoC/', cursoC),
+    path('cursoCss/', cursoCss),
 ]
